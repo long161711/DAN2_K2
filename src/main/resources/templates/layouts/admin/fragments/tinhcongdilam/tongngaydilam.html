@@ -1,0 +1,84 @@
+<a class="navbar-brand" href="dashboard.html">LONG-HIỀN</a> 
+            </div>
+  <div style="color: white;
+padding: 15px 50px 5px 50px;
+float: right;
+font-size: 16px;"><a href="sign-out.html" th:href="@{/sign-out}" class="btn btn-danger square-btn-adjust">Logout</a> </div>
+        </nav>   
+           <!-- /. NAV TOP  -->
+                <nav class="navbar-default navbar-side" role="navigation">
+            <div class="sidebar-collapse">
+                <ul class="nav" id="main-menu">
+				<li class="text-center">
+					</li>
+				
+					
+                    <li>
+                        <a class="active-menu"  href="dashboard.html"><i class="fa fa-dashboard fa-3x"></i> Dashboard</a>
+                    </li>
+                     <li>
+  		 				<a href="hienthi.html" th:href="@{/hienthi}">Tài khoản</a>
+                    </li>
+                    <li>
+ 			 			<a href="hienthinhanvien.html" th:href="@{/hienthinhanvien}">Nhân viên</a>
+                    </li>	
+                      <li  >
+ 			 			<a href="docfiletxt.html" th:href = "@{/docfilettxt}">Chấm công</a>
+                    </li>
+                  <!-- <li  >
+                        <a  href="blank.html"><i class="fa fa-square-o fa-3x"></i> Blank Page</a>
+                    </li>	 -->
+                </ul>
+               
+            </div>
+            
+        </nav>  
+        <div id="page-wrapper" >
+            <div id="page-inner">
+    	<div class="row">
+                    <div class="col-md-12">
+                     <h2>Chấm công</h2>   
+                        <h5>Welcome , Love to see you back. </h5>
+                       
+                    </div>
+                </div>
+            <div class="container">
+                <form >
+                    <h1> du lieu tinh ra tu file</h1>
+                   
+                    <div>
+						<table class ="table" id="table">
+    						<tr> 
+    							<td>id</td>
+    							<td>idnhanvien</td>
+    							<td>Hoten</td>
+    							<td>songaydilam</td>
+       						</tr>
+ 	
+    						<tr th:each= " a : ${xuat} ">
+    							<td th:text="*{a.getId()}"></td>
+    							<td th:text="*{a.getIdnhanvien()}"></td>
+    							<td th:text="*{a.getHoten()}"></td>
+    							<td th:text="*{a.getSobuoi()}"></td>
+    						</tr>
+    			
+    					</table> 	                        
+                    </div>
+					  <a href="hienthinhanvien.html" th:href="@{/hienthinhanvien}">quaylai</a>
+                </form>
+         
+            </div>
+<script src="static/js/jquery-1.10.2.js"></script>
+      <!-- BOOTSTRAP SCRIPTS -->
+    <script src="static/js/bootstrap.min.js"></script>
+    <!-- METISMENU SCRIPTS -->
+    <script src="static/js/jquery.metisMenu.js"></script>
+     <!-- DATA TABLE SCRIPTS -->
+    <script src="static/js/dataTables/jquery.dataTables.js"></script>
+    <script src="static/js/dataTables/dataTables.bootstrap.js"></script>
+    <script src="static/js/custom.js"></script>
+    
+   
+</body>
+</html>
+      
